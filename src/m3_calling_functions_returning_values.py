@@ -21,7 +21,7 @@ def main():
     run_test_fancy_sums_of_digits()
 
     # ------------------------------------------------------------------
-    # TODO: 9. DO THIS LAST!
+    # DONE: 9. DO THIS LAST!
     #    -- Uncomment the line of code below to run the main function in m3t_tester.py (do not make changes to it).
     #         It runs OUR tests on your code.
     #    -- Check to see whether all test cases indicate they
@@ -31,7 +31,7 @@ def main():
     #       ** Ask a TA or your professor for help in that case. **
     # ------------------------------------------------------------------
 
-    # m3t_tester.main()
+    m3t_tester.main()
 
 
 def run_test_sum_of_digits():
@@ -125,7 +125,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -249,7 +249,7 @@ def digits_in_power(n, k):
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -268,6 +268,24 @@ def run_test_fancy_sums_of_digits():
     # your 2nd and 3rd tests but READ THOSE TEST CASES CAREFULLY
     # in the doc-string to be sure that you understand the specification.
     # ------------------------------------------------------------------
+
+    #Test 1
+    expect1 = 1
+    answer1 = fancy_sums_of_digits(1)
+    print('Test 1 expected:',expect1)
+    print('       actual:  ',answer1)
+
+    #Test 2
+    expect2 = 19084
+    answer2 = fancy_sums_of_digits(2)
+    print('Test 2 expected:',expect2)
+    print('       actual:  ',answer2)
+
+    #Test 3
+    expect3 = 124309
+    answer3 = fancy_sums_of_digits(35)
+    print('Test 3 expected:',expect3)
+    print('       actual:  ',answer3)
 
 
 def fancy_sums_of_digits(n):
@@ -294,8 +312,19 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+
+    blah = n**1000
+    dawg = n**999
+
+    merry = sum_of_digits(blah)
+    xmas = sum_of_digits(dawg)
+
+    dude = merry**xmas
+    merry_xmas = sum_of_digits(dude)
+    return merry_xmas
+
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
